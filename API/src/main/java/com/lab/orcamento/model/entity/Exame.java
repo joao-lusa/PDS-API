@@ -2,6 +2,7 @@ package com.lab.orcamento.model.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -13,7 +14,8 @@ import java.math.BigDecimal;
 public class Exame {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private Integer id;
 
     @NotNull(message = "Deve ser preechido o nome do exame!")
