@@ -27,7 +27,7 @@ public class Exame {
     private BigDecimal preco;
 
     @NotNull(message = "deve ser informado uma sigla no exame!")
-    @Column(length = 3)
+    @Column(length = 10)
     private String sigla;
 
     @NotNull(message = "deve ser informado se o cliente deve ficar em jejum!")
